@@ -1,0 +1,9 @@
+---
+users:
+  - gh
+  - cc
+  - os
+sudoers:
+  - gh
+  - os
+disable_passwords: false

@@ -1,0 +1,6 @@
+---
+- name: "dump the users"
+  debug:
+    msg: "{{ item }}"
+  loop: "{{ user_defs | dict2items }}"
+  when: item.key in users

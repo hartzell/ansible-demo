@@ -1,0 +1,6 @@
+---
+users:
+  - gh
+sudoers:
+  - gh
+allow_root: true

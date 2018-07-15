@@ -1,0 +1,4 @@
+---
+- import_playbook: a.yml
+- import_playbook: b.yml
+- import_playbook: solo.yml

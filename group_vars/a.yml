@@ -1,0 +1,7 @@
+---
+users:
+  - gh
+  - cc
+sudoers:
+  - gh
+  - cc

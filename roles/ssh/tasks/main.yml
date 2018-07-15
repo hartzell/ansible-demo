@@ -1,0 +1,8 @@
+---
+- name: "disable_passwords"
+  debug:
+    msg: "{{ disable_passwords }}"
+
+- name: "allow_root"
+  debug:
+    msg: "{{ allow_root }}"
