@@ -28,10 +28,10 @@ something to count on as the site grows.
    disallowed.  The ability to authenticate with a password is
    configurable, defaults to being disallowed.
 
-   Only `solo.alerce.com` allows root SSH connections.
+   Only **solo.alerce.com** allows root SSH connections.
 
-   Only the machines in group *b* allow password authentication,
-   *except* (oddly enough), `c.b.alerce.com`.
+   Only the machines in group **b** allow password authentication,
+   *except* (oddly enough), **c.b.alerce.com**.
 
 # The solution
 
@@ -98,7 +98,7 @@ The lists of `users` and `sudoers` are set in either a `group_vars`
 SSH and sudo configurations are set in either a `group_vars` (for
 machines in **a** and **b**) or a `host_vars` file (for **solo**).
 Password authentication for group **b** is set in `group_vars/b.yml`
-*but* that setting for `c.b.alerce.com` is overridden in
+*but* that setting for **c.b.alerce.com** is overridden in
 `host_vars/c.b.alerce.com.yml`.
 
 All of the roles define default values for their configuration
