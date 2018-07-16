@@ -1,0 +1,5 @@
+---
+
+- name: "dump the users"
+  debug:
+    msg: "The name is: {{ solo_name}}"

@@ -1,6 +1,6 @@
 ---
 - name: "set sudoers"
   debug:
-    msg: "{{ item }}"
+    msg: "Add to sudoers: {{ item.key }}"
   loop: "{{ user_defs | dict2items }}"
   when: item.key in sudoers

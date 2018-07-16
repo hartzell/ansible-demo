@@ -1,7 +1,8 @@
 ---
 - hosts: solo.alerce.com
   gather_facts: no
+  vars:
+    - solo_name: Hans Solo
   roles:
-    - users
-    - sudo
-    - ssh
+    - basics
+    - solo

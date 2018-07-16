@@ -2,6 +2,4 @@
 - hosts: b
   gather_facts: no
   roles:
-    - users
-    - sudo
-    - ssh
+    - basics

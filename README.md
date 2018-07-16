@@ -33,6 +33,8 @@ something to count on as the site grows.
    Only the machines in group **b** allow password authentication,
    *except* (oddly enough), **c.b.alerce.com**.
 
+4. The solo machine needs to run solo-specific plays.
+
 # The solution
 
 Here's the file layout:
@@ -104,6 +106,13 @@ Password authentication for group **b** is set in `group_vars/b.yml`
 All of the roles define default values for their configuration
 variables in `roles/*/defaults/main.yml`
 
+Since *all* of the machines do the basic roles (users, ssh, sudo)
+those roles have been gathered into a `basics` role.
+
+There is a separate role, `solo` that the solo machine uses.  Its
+unique resource (e.g. files, templates) can live within the role so
+that the top-level landscape isn't cluttered.
+
 # Running the playbooks
 
 You can safely run the commands below, they don't actually *do*
@@ -148,13 +157,6 @@ one of the groups:
   # for solo
   ansible-playbook -i hosts.ini -l c.b.alerce.com site.yml
   ```
-
-# Variations/homework
-
-All of the group/solo specific playbooks do all three roles.  A
-variation would be to define a `common` role that does those three
-roles and use it in the playbooks.  That would be more [DRY][dry] and
-would probably be useful in practice.
 
 [anatomy]: http://www.oznetnerd.com/anatomy-ansible-playbook/
 [dry]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
